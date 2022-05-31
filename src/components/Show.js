@@ -86,8 +86,12 @@ const Show = () => {
                                 <td>{product.description}</td>
                                 <td>{product.stock}</td>
                                 <td>
-                                    <Link to={'/edit/${product.id}'} 
+
+                                    <Link to={'/edit/' + product.id } 
                                     className="btn btn-light"><i className="fa-solid fa-pencil"></i></Link>
+
+
+
                                     <button onClick={() => {confirmDelete(product.id) } }
                                     className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
                                 </td>

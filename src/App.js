@@ -13,7 +13,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-<<<<<<< HEAD
+
     <div className='App'>
        <Cover/>
       <Navbar/>
@@ -28,14 +28,10 @@ function App() {
      
   
      
-=======
-    <div >
-      <h1>Hola Mundo</h1>
-      <h1>Hola Mundo</h1>
-      <h1>Hola Mundo</h1>
->>>>>>> 3c950c743ababe952dc15f8f2239962cc88934c2
-    </div>
-  );
+
+  
+  </div>
+  )
 }
 
 export default App;

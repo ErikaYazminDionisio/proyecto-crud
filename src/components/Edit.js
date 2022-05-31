@@ -25,7 +25,7 @@ const Edit = () => {
         if(product.exists()){
             //console.log(product.data())
             setDescription(product.data().description)
-            setStock(product.data().stock())
+            setStock(product.data().stock)
         }else{
             console.log('Producto no existente')
         }
