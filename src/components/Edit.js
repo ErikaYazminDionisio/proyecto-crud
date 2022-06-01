@@ -6,7 +6,7 @@ import { async } from '@firebase/util'
 
 const Edit = () => {
     const [description,setDescription] = useState('')
-    const [stock, setStock] = useState(0)
+    const [stock, setStock] = useState()
 
     const navigate = useNavigate()
     const {id} = useParams()
@@ -48,6 +48,7 @@ const Edit = () => {
                     <input
                         value = {description}
                         onChange={ (e) => setDescription(e.target.value)}
+                        required
                         type = "text"
                         className='form-control'
                     />
@@ -58,11 +59,13 @@ const Edit = () => {
                     <input
                         value={stock}
                         onChange={ (e)=> setStock(e.target.value)}
+                        required
                         type="number"
                         className='form-control'
                     />
                 </div>
-                <button type='submit' className='btn btn-primary'>Actualizar</button>
+                <button type='submit' className='btn btn-primary'
+                >Actualizar</button>
             </form>
         </div>
     </div>

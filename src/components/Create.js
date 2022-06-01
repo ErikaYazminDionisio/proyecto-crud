@@ -7,7 +7,7 @@ import { async } from '@firebase/util'
 
 const Create = () => {
     const [description,setDescription] = useState('')
-    const [stock, setStock] = useState(0)
+    const [stock, setStock] = useState()
 
     const navigate = useNavigate()
 
@@ -30,6 +30,7 @@ const Create = () => {
                         <input
                             value = {description}
                             onChange={ (e) => setDescription(e.target.value)}
+                            required
                             type = "text"
                             className='form-control'
                         />
@@ -40,6 +41,7 @@ const Create = () => {
                         <input
                             value={stock}
                             onChange={ (e)=> setStock(e.target.value)}
+                            required
                             type="number"
                             className='form-control'
                         />

@@ -69,9 +69,9 @@ const Show = () => {
        <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>
-                <Link to="/create" className='btn btn-secondary mt-2 mb-2' >Create</Link>
+                <Link to="/create" className='btn btn-dark mt-2 mb-2' >Agregar</Link>
                 </div>
-                <table className='table table-dark table-hover'>
+                <table className='table table-default table-hover'>
                     <thead>
                         <tr>
                             <th>Description</th>
@@ -83,17 +83,17 @@ const Show = () => {
                     <tbody>
                         {products.map( (product) =>(
                             <tr key={product.id}>
-                                <td>{product.description}</td>
-                                <td>{product.stock}</td>
+                                <td >{product.description}</td>
+                                <td >{product.stock}</td>
                                 <td>
 
                                     <Link to={'/edit/' + product.id } 
-                                    className="btn btn-light"><i className="fa-solid fa-pencil"></i></Link>
-
+                                    className="btn btn-warning "><i className="fa-solid fa-pencil"></i></Link>
+                                    
 
 
                                     <button onClick={() => {confirmDelete(product.id) } }
-                                    className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
+                                    className="btn btn-danger delete"><i className="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         ) ) }

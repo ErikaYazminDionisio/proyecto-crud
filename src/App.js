@@ -1,6 +1,7 @@
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Cover from './components/cover/Cover';
-import Navbar from './components/cover/navbar/Navbar';
+import Navbar from './components/navbar/Navbar';
 
 
 //Importar componentes
@@ -12,11 +13,25 @@ import Show from './components/Show';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
+  //Posicion del scroll
+  const {scrollHeight, setScrollHeight} = useState(0);
+
+  const handleScroll = () =>{
+    const position = window.pageYOffset;
+    setScrollHeight(position);
+
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll",handleScroll);
+  }, [scrollHeight]);
+
   return (
 
     <div className='App'>
-       <Cover/>
-      <Navbar/>
+       
+      <Navbar isScrolling={scrollHeight}/>
+      <Cover/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Show/>} />
