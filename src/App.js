@@ -1,7 +1,7 @@
 import './App.css';
 import Cover from './components/cover/Cover';
 import Navbar from './components/navbar/Navbar';
-
+import About from './components/about/About';
 
 //Importar componentes
 import Create from './components/Create';
@@ -10,6 +10,7 @@ import Show from './components/Show';
 
 //Importamos el router
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
        
       <Navbar/>
       <Cover/>
-      
+      <About/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Show/>} />
