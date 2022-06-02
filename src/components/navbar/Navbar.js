@@ -3,7 +3,7 @@ import "./Navbar.css"
 
 const Navbar = ({isScrolling}) => {
   return (
-    <nav className= {`navbar ${isScrolling > 20 ? "scrolling" : null}`}>
+    <nav className='navbar' >
         <div className="navbar-logo">
             Your name
         </div>
